@@ -280,7 +280,6 @@ progress::-moz-progress-bar {
 }
 
 .para {
-    height: 100%;
     display: flex;
     align-items: center;
     max-width: 538px;
@@ -291,6 +290,8 @@ progress::-moz-progress-bar {
     border-right: solid 1px #ccc;
     text-align: right;
     margin-left: 80px;
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
 }
 
 #who {
@@ -298,6 +299,8 @@ progress::-moz-progress-bar {
     text-align: left;
     padding-top: 230px;
     margin-right: 80px;
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
 }
 
 .full-recipe {
@@ -328,22 +331,27 @@ progress::-moz-progress-bar {
     justify-content: space-between;
 }
 
+.fadeUp,
+.fadeDown {
+    opacity: 0;   /*  animation requirement */
+}
+
 .recipe-contain article {
     flex-basis: 30%;
     opacity: 0;   /*  ///// this is so animation works on the article elements */
 }
 
-#block1 {
+.block1 {
     animation-delay: .2s;
     -webkit-animation-delay: .2s;
 }
 
-#block2 {
+.block2 {
     animation-delay: .5s;
     -webkit-animation-delay: .5s;
 }
 
-#block3 {
+.block3 {
     animation-delay: .8s;
     -webkit-animation-delay: .8s;
 }
@@ -996,10 +1004,6 @@ a .button {
 
     #intouch .subhead-center {
         margin-top: 10px;
-    }
-
-    .behind {
-        display: none;
     }
 }
 

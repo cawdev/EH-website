@@ -3,11 +3,14 @@
 	'use strict';
 
 	var $document = $(document),
+		$window = $(window),
+		distanceFromTop = $(document).scrollTop(),
+		$navbar = $('.navbar'),
+		$skyVideo = $('video#skyvideo'),
+		genericMobileUA = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)),
+
 		stickyNavFunc = function() {
 			$(window).scroll(function() {
-				var distanceFromTop = $(document).scrollTop(),
-					$navbar = $('.navbar');
-				
 				distanceFromTop >= $('#up').height() ? 
 				$navbar.fadeIn(400)
 					   .addClass('animated slideInDown fixed') :
@@ -64,15 +67,15 @@
 
 			return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 		},
-		fadeInFunc = function () {
-
-			$(window).scroll(function() {
-				$('.scrolled .animated').each(function() {
-				if (isScrolledIntoView(this) === true) {
-					$(this).addClass('fadeInUp');
+		fadeInFunc = function (element, transition) {
+			$(element).each(function() {
+				if (isScrolledIntoView($(this)) === true) {
+					$(this).addClass(transition);
 				}
-				});
 			});
+		},
+		initSkyQuest = function() {
+			!genericMobileUA ? $skyVideo.attr('preload', 'auto') : $skyVideo.removeAttr('autoplay muted loop playsinline');
 		};
 
 	$document.on({
@@ -81,7 +84,14 @@
 			smoothScroll();
 			slickFunc();
 			progressBarFunc();
-			fadeInFunc();
+			initSkyQuest();
+		}
+	});
+
+	$window.on({
+		scroll: function() {
+			fadeInFunc('.scrolled .fadeUp.animated', 'fadeInUp');
+			fadeInFunc('.scrolled .fadeDown.animated', 'fadeInDown');
 		}
 	});
 })(jQuery);
