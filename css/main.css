@@ -112,6 +112,12 @@ h5 {
     position: relative;
 }
 
+.hero .fadeInDown,
+.hero .fadeInUp {
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+}
+
 .hero .animated {
     animation-delay: 0 !important;
     -webkit-animation-delay: 0 !important;
@@ -332,7 +338,8 @@ progress::-moz-progress-bar {
 }
 
 .fadeUp,
-.fadeDown {
+.fadeDown,
+.fadeLeft {
     opacity: 0;   /*  animation requirement */
 }
 

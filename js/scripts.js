@@ -92,6 +92,7 @@
 		scroll: function() {
 			fadeInFunc('.scrolled .fadeUp.animated', 'fadeInUp');
 			fadeInFunc('.scrolled .fadeDown.animated', 'fadeInDown');
+			fadeInFunc('.scrolled .fadeLeft.animated', 'fadeInLeft');
 		}
 	});
 })(jQuery);
