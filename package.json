@@ -1,7 +1,7 @@
 {
-  "name": "eschatch-website",
+  "name": "EH-website",
   "version": "1.0.0",
-  "description": "The Escape Hatch Website",
+  "description": "The EH Website",
   "main": "index.html",
   "directories": {
     "doc": "doc"
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cawdev/eschatch-website.git"
+    "url": "git+https://github.com/cawdev/EH-website.git"
   },
   "author": "cawdev",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cawdev/eschatch-website/issues"
+    "url": "https://github.com/cawdev/EH-website/issues"
   },
-  "homepage": "https://github.com/cawdev/eschatch-website#readme",
+  "homepage": "https://github.com/cawdev/EH-website#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",

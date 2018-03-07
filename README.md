@@ -1,4 +1,4 @@
-# Escape Hatch Website
+# EH-Website
 
 ## Local Development
 
