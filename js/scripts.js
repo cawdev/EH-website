@@ -67,7 +67,7 @@
 
 			return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 		},
-		fadeInFunc = function (element, transition) {
+		fadeInFunc = function(element, transition) {
 			$(element).each(function() {
 				if (isScrolledIntoView($(this)) === true) {
 					$(this).addClass(transition);
