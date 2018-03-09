@@ -232,7 +232,7 @@ progress {
     color: #42C3B7;
     position: relative;
     z-index: 700;
-    vertical-align: top;
+    vertical-align: top !important;
 }
 
 progress::-webkit-progress-bar {
@@ -299,7 +299,6 @@ progress::-moz-progress-bar {
 #who {
     border-right: solid 1px #ccc;
     text-align: left;
-    padding-top: 230px;
     margin-right: 80px;
     animation-delay: 1s;
     -webkit-animation-delay: 1s;
@@ -835,17 +834,17 @@ a .button {
         padding-left: 15px;
     }
 
-    #block1 {
+    .block1 {
         animation-delay: 0;
         -webkit-animation-delay: 0;
     }
     
-    #block2 {
+    .block2 {
         animation-delay: 0;
         -webkit-animation-delay: 0;
     }
     
-    #block3 {
+    .block3 {
         animation-delay: 0;
         -webkit-animation-delay: 0;
     }
@@ -918,6 +917,10 @@ a .button {
 
     .moveup {
         margin-top: 0;
+    }
+
+    .movedown {
+        padding-top: 0;
     }
 }
 
