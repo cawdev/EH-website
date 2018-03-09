@@ -252,11 +252,6 @@ progress::-moz-progress-bar {
     color: black;
 }
 
-.navname:hover {
-    -webkit-animation: swing 1s;
-    animation: swing 1s;
-}
-
 .redbar:hover {
     -webkit-animation: pulse 0.5s;
     animation: pulse 0.5s;
@@ -289,6 +284,7 @@ progress::-moz-progress-bar {
     display: flex;
     align-items: center;
     max-width: 538px;
+    /* height: 100%; deprecated? */
 }
 
 #were {
@@ -322,8 +318,17 @@ progress::-moz-progress-bar {
     position: relative;
 }
 
+.statement {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 20px 0;
+    font-size: 30px;
+    line-height: 40px;
+    margin: 80px 0;
+}
+
 .overlay-r {
-    background: linear-gradient(rgba(26,149,137,.6) 50%, rgba(26,149,137,1));
+    background: linear-gradient(rgba(26,149,137,0), rgba(26,149,137,.8) 50%);
     overflow: hidden;
     height: 100%;
     z-index: 2;
@@ -390,6 +395,7 @@ progress::-moz-progress-bar {
     position: absolute;
     top: 0;
     left: 0;
+    opacity: 0.75;
 }
 
 #hellyeahoffice {
@@ -433,6 +439,8 @@ progress::-moz-progress-bar {
     left: 0;
     -webkit-mask-image:
     -webkit-gradient(linear, left 15%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    mask-image:
+    linear-gradient(linear, left 15%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
 }
 
 .behind {
@@ -517,22 +525,6 @@ progress::-moz-progress-bar {
 
 li {
     list-style-type: none;
-}
-
-.logo-flex {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 200px);
-    grid-gap: 150px 25px;
-    justify-content: space-between;
-    justify-items: center;
-    align-items: center;
-    box-sizing: border-box;
-    max-width: 1200px;
-    padding-top: 150px;
-}
-
-.logo img {
-    object-fit: contain;
 }
 
 button {
@@ -741,6 +733,14 @@ a .button {
     color: rgba(255, 255, 255, 0.8)
 }
 
+.whitesmall {
+    display: inline-flex;
+}
+
+.moveup {
+    margin-top: -60px;
+}
+
 
 
 /* ==========================================================================
@@ -805,7 +805,6 @@ a .button {
     
     .recipe-contain {
         flex-flow: column;
-        padding: 60px 0 0 0;
     }
 
     .recipe-contain article {
@@ -832,6 +831,21 @@ a .button {
 
     .navname {
         padding-left: 15px;
+    }
+
+    #block1 {
+        animation-delay: 0;
+        -webkit-animation-delay: 0;
+    }
+    
+    #block2 {
+        animation-delay: 0;
+        -webkit-animation-delay: 0;
+    }
+    
+    #block3 {
+        animation-delay: 0;
+        -webkit-animation-delay: 0;
     }
 }
 
@@ -862,6 +876,47 @@ a .button {
     .slickcontain {
         padding: 219px 0 0 0 !important;
     }
+
+    .two-para {
+        flex-flow: column;
+        margin: 0 80px;
+        border-left: solid 1px #CCC;
+        border-right: solid 1px #CCC;
+        width: auto;
+    }
+
+    .para, #who, #were {
+        border: none;
+        text-align: left;
+        height: auto;
+        display: block;
+        margin: 0;
+        padding-top: 0;
+    }
+
+    .para {
+        max-width: inherit;
+    }
+
+    #were {
+        margin-top: 50px !important;
+    }
+    
+    #who {
+        padding-top: 20px !important;
+    }
+
+    .full-hello {
+        height: 760px;
+    }
+
+    .stripes {
+        background-size: 400px 400px;
+    }
+
+    .moveup {
+        margin-top: 0;
+    }
 }
 
 @media only screen and (max-width: 690px) {
@@ -869,6 +924,12 @@ a .button {
     .hero {
         background:
         url(../img/plaid-hero-mobile@1x.jpg) no-repeat center center;
+        background-size: cover;
+    }
+
+    .recipe {
+        background:
+        url(../img/emergency-hatch-mobile@1x.jpg) no-repeat center center;
         background-size: cover;
     }
 
@@ -931,7 +992,7 @@ a .button {
     }
 
     .stripes {
-        background-size: 350px 350px;
+        background-size: 146px 146px;
     }
 
     .case-right {
@@ -951,35 +1012,6 @@ a .button {
         height: 730px;
     }
     
-    .two-para {
-        flex-flow: column;
-        margin: 0 40px;
-        border-left: solid 1px #CCC;
-        border-right: solid 1px #CCC;
-        width: auto;
-    }
-
-    .para, #who, #were {
-        border: none;
-        text-align: left;
-        height: auto;
-        display: block;
-        margin: 0;
-        padding-top: 0;
-    }
-
-    #were {
-        margin-top: 50px !important;
-    }
-    
-    #who {
-        padding-top: 20px !important;
-    }
-
-    .stripes {
-        background-size: 146px 146px;
-    }
-
     .slickcontain {
         padding: 160px 0 0 0 !important;
     }
@@ -1012,28 +1044,26 @@ a .button {
     #intouch .subhead-center {
         margin-top: 10px;
     }
+
+    .behind {
+        display: none;
+    }
+
+    .statement {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .two-para {
+        margin: 0 40px;
+    }
 }
 
 @media only screen and (max-width: 580px) {
 
-    .logo-flex {
-        grid-template-columns: repeat(auto-fit, 120px);
-        grid-gap: 80px 75px;
-        padding-top: 80px;
-        justify-items: end;
-        text-align: right;
-    }
-
-    .logo img {
-        max-width: 100%;
-    }
-
-    img#cbiz {
-        max-width: 50% !important;
-    }
-
     .whitebar {
-        padding-left: 10px;
+        padding-left: 0;
+        width: 50%;
     }
 
     .navname {
@@ -1042,9 +1072,14 @@ a .button {
     }
 
     .redbar {
-        padding: 0 10px;
+        padding: 0;
         letter-spacing: 1px;
         font-size: 12px;
+        max-width: 50%;
+    }
+
+    .whitesmall {
+        padding-left: 10px;
     }
 }
 
@@ -1059,10 +1094,6 @@ a .button {
         line-height: 2.5rem;
     }
 
-    .logo-flex {
-        grid-gap: 80px 30px;
-    }
-
     #carrot {
         top: -170px;
     }
@@ -1070,9 +1101,19 @@ a .button {
 
 @media only screen and (max-width: 374px) {
 
-.logo-flex {
-    grid-template-columns: repeat(auto-fit, 100px);
-    }
+    .redbar {
+        max-width: 45%;
+        font-size: 10px;
+        }
+
+    .whitebar {
+        width: 55%;
+        }
+
+    .case-right .button {
+        padding: 14px 26px;
+        left: 81px;
+        }
 }
 
 
