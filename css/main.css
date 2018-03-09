@@ -835,18 +835,18 @@ a .button {
     }
 
     .block1 {
-        animation-delay: 0;
-        -webkit-animation-delay: 0;
+        animation-delay: 0s !important;
+        -webkit-animation-delay: 0s !important;
     }
     
     .block2 {
-        animation-delay: 0;
-        -webkit-animation-delay: 0;
+        animation-delay: 0s !important;
+        -webkit-animation-delay: 0s !important;
     }
     
     .block3 {
-        animation-delay: 0;
-        -webkit-animation-delay: 0;
+        animation-delay: 0s !important;
+        -webkit-animation-delay: 0s !important;
     }
 }
 
@@ -935,6 +935,18 @@ a .button {
     .recipe {
         background:
         url(../img/emergency-hatch-mobile@1x.jpg) no-repeat center center;
+        background-size: cover;
+    }
+
+    .casestudy {
+        background:
+        url(../img/sky-quest-blue-bg-mobile.jpg) no-repeat left center;
+        background-size: cover;
+    }
+
+    #intouch {
+        background:
+        url(../img/gordon-square-mobile.jpg) no-repeat top center;
         background-size: cover;
     }
 
@@ -1101,6 +1113,10 @@ a .button {
 
     #carrot {
         top: -170px;
+    }
+
+    .case-headline {
+        max-width: 220px;
     }
 }
 
