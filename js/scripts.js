@@ -4,14 +4,13 @@
 
 	var $document = $(document),
 		$window = $(window),
-		distanceFromTop = $(document).scrollTop(),
 		$navbar = $('.navbar'),
 		$skyVideo = $('video#skyvideo'),
 		genericMobileUA = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)),
 
 		stickyNavFunc = function() {
 			$(window).scroll(function() {
-				distanceFromTop >= $('#up').height() ? 
+				$(document).scrollTop() >= $('#up').height() ? 
 				$navbar.fadeIn(400)
 					   .addClass('animated slideInDown fixed') :
 				$navbar.removeClass('slideInDown')
