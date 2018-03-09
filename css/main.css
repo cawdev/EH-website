@@ -1119,7 +1119,9 @@ a .button {
     }
 
     #carrot {
-        top: -170px;
+        top: -140px;
+        width: 60px;
+        height: auto;
     }
 
     .case-headline {
