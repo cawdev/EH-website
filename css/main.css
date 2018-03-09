@@ -119,8 +119,8 @@ h5 {
 }
 
 .hero .animated {
-    animation-delay: 0 !important;
-    -webkit-animation-delay: 0 !important;
+    animation-delay: 0s !important;
+    -webkit-animation-delay: 0s !important;
 }
 
 header .animated {
@@ -418,6 +418,11 @@ progress::-moz-progress-bar {
 
 .subhead-center {
     margin: 10px 0 0 0;
+}
+
+.subhead-center {
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
 }
 
 .full-case {
@@ -975,6 +980,8 @@ a .button {
 
     .subhead-center {
         margin: 15px 0 30px 0;
+        animation-delay: 0s;
+        -webkit-animation-delay: 0s;
     }
 
     h1 {
