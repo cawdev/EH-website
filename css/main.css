@@ -440,8 +440,8 @@ progress::-moz-progress-bar {
     position: absolute;
     top: 0;
     left: 0;
-    -webkit-mask-image:
-    -webkit-gradient(linear, left 15%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    mask-image: linear-gradient(to bottom, black 15%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, black 15%, transparent);
 }
 
 .behind {
