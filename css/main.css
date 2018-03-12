@@ -112,20 +112,15 @@ h5 {
     position: relative;
 }
 
-.hero .fadeInDown,
-.hero .fadeInUp {
-    animation-delay: 1s;
-    -webkit-animation-delay: 1s;
-}
-
-.hero .animated {
+#herobg {
     animation-delay: 0s !important;
     -webkit-animation-delay: 0s !important;
 }
 
-header .animated {
-    animation-delay: 0.5s;
-    -webkit-animation-delay: 0.5s;
+.hero .fadeInDown,
+.hero .fadeInUp {
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
 }
 
 .esclogo {
