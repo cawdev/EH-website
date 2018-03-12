@@ -503,6 +503,8 @@ progress::-moz-progress-bar {
 .case-right {
     max-width: 500px;
     padding-left: 10vw;
+    animation-delay: .3s;
+    -webkit-animation-delay: .3s;
 }
 
 .case-right ul {
@@ -860,6 +862,8 @@ a .button {
 
     .case-right {
         padding: 50px 0 0 0;
+        animation-delay: 0s;
+        -webkit-animation-delay: 0s;
     }
 
     .case-left {
