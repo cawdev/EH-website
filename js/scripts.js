@@ -62,7 +62,8 @@
 			var docViewTop = $(window).scrollTop(),
 				docViewBottom = docViewTop + $(window).height(),
 				elemTop = $(elem).offset().top,
-				elemBottom = elemTop + $(elem).height();
+				elemBottom = elemTop + $(elem).height() - 150;
+				// 150 equal to arbritary value, added to allow for element to animate quicker.
 
 			return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 		},
@@ -92,6 +93,9 @@
 			fadeInFunc('.scrolled .fadeUp.animated', 'fadeInUp');
 			fadeInFunc('.scrolled .fadeDown.animated', 'fadeInDown');
 			fadeInFunc('.scrolled .fadeLeft.animated', 'fadeInLeft');
+		},
+		load: function() {
+			$('body').removeClass('js-loading');
 		}
 	});
 })(jQuery);
