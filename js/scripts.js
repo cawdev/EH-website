@@ -102,12 +102,6 @@
 			fadeInFunc('.scrolled .fadeUp.animated', 'fadeInUp');
 			fadeInFunc('.scrolled .fadeDown.animated', 'fadeInDown');
 			fadeInFunc('.scrolled .fadeLeft.animated', 'fadeInLeft');
-		},
-		load: function() {
-			$('.hero').removeClass('animated fadeIn');
-			$('.esclogo').removeClass('animated fadeInDown');
-			$('.imaginative-thinking').removeClass('animated fadeInDown');
-			$('.intro2').removeClass('animated fadeInUp');
 		}
 	});
 })(jQuery);
