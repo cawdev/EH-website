@@ -67,6 +67,13 @@
 
 			return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 		},
+		startCarousel = function(element) {
+			$(element).each(function() {
+				if (isScrolledIntoView($(this)) === true) {
+					slickFunc();
+				}
+			});
+		},
 		fadeInFunc = function(element, transition) {
 			$(element).each(function() {
 				if (isScrolledIntoView($(this)) === true) {
@@ -74,8 +81,10 @@
 				}
 			});
 		},
-		initSkyQuest = function() {
-			!genericMobileUA ? $skyVideo.attr('preload', 'auto') : $skyVideo.removeAttr('autoplay muted loop playsinline');
+		preventHTMLVideo = function() {
+			if (genericMobileUA) {
+				$skyVideo.remove();
+			}
 		};
 
 	$document.on({
@@ -84,7 +93,7 @@
 			smoothScroll();
 			slickFunc();
 			progressBarFunc();
-			initSkyQuest();
+			preventHTMLVideo();
 		}
 	});
 
