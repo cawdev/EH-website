@@ -89,7 +89,7 @@
 		},
 		showPage = function() {
 			document.body.classList.remove('js-loading');
-		}
+		},
 		delayAnimation = function() {
 			document.body.classList.add('js-loading');
 			window.addEventListener("load", showPage);
