@@ -67,13 +67,6 @@
 
 			return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 		},
-		startCarousel = function(element) {
-			$(element).each(function() {
-				if (isScrolledIntoView($(this)) === true) {
-					slickFunc();
-				}
-			});
-		},
 		fadeInFunc = function(element, transition) {
 			$(element).each(function() {
 				if (isScrolledIntoView($(this)) === true) {
