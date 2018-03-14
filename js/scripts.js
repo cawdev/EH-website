@@ -7,7 +7,6 @@
 		$navbar = $('.navbar'),
 		$skyVideo = $('video#skyvideo'),
 		genericMobileUA = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)),
-		$hero = $('.full'),
 
 		stickyNavFunc = function() {
 			$(window).scroll(function() {
@@ -86,21 +85,7 @@
 			if (genericMobileUA) {
 				$skyVideo.remove();
 			}
-		},
-		showPage = function() {
-			document.body.classList.remove('js-loading');
-		},
-		delayAnimation = function() {
-			document.body.classList.add('js-loading');
-			window.addEventListener("load", showPage);
 		};
-
-    // Delay Animation - Vanilla JS
-	document.body.classList.add('js-loading');
-	window.addEventListener("load", showPage);
-	function showPage() {
-	  document.body.classList.remove('js-loading');
-	}
 
 	$document.on({
 		ready: function() {
@@ -118,5 +103,11 @@
 			fadeInFunc('.scrolled .fadeDown.animated', 'fadeInDown');
 			fadeInFunc('.scrolled .fadeLeft.animated', 'fadeInLeft');
 		},
+		load: function() {
+			$('.hero').removeClass('animated fadeIn');
+			$('.esclogo').removeClass('animated fadeInDown');
+			$('.imaginative-thinking').removeClass('animated fadeInDown');
+			$('.intro2').removeClass('animated fadeInUp');
+		}
 	});
 })(jQuery);

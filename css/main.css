@@ -46,12 +46,6 @@ html {
    Escape Hatch styles
    ========================================================================== */
 
-.js-loading *,
-.js-loading *:before,
-.js-loading *:after {
-  animation-play-state: paused !important;
-}
-
 body {
     font-family: 'Nunito', 'Helvetica', 'Arial', sans-serif;
     color: black;
@@ -119,14 +113,11 @@ h5 {
 }
 
 #herobg {
-    animation-delay: 0s !important;
-    -webkit-animation-delay: 0s !important;
 }
 
 .hero .fadeInDown,
 .hero .fadeInUp {
-    animation-delay: 1s;
-    -webkit-animation-delay: 1s;
+
 }
 
 .esclogo {
