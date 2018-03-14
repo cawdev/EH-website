@@ -105,7 +105,6 @@
 			slickFunc();
 			progressBarFunc();
 			preventHTMLVideo();
-			$('body').css('display', 'block');
 		}
 	});
 
