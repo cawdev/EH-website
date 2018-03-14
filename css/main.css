@@ -27,6 +27,15 @@ html {
     text-shadow: none;
 }
 
+.js-loading *,
+.js-loading *:before,
+.js-loading *:after {
+  animation-play-state: paused !important;
+}
+
+.body-hide {
+    display: none;
+}
 
 /* ==========================================================================
    Custom Fonts
@@ -45,12 +54,6 @@ html {
 /* ==========================================================================
    Escape Hatch styles
    ========================================================================== */
-
-.js-loading *,
-.js-loading *:before,
-.js-loading *:after {
-  animation-play-state: paused !important;
-}
 
 body {
     font-family: 'Nunito', 'Helvetica', 'Arial', sans-serif;

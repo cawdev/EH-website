@@ -89,14 +89,17 @@
 		},
 		showPage = function() {
 			document.body.classList.remove('js-loading');
+			document.body.classList.remove('body-hide');
 		},
 		delayAnimation = function() {
 			document.body.classList.add('js-loading');
+			document.body.classList.add('body-hide');
 			window.addEventListener("load", showPage);
 		};
 
 	$document.on({
 		ready: function() {
+			delayAnimation();
 			stickyNavFunc();
 			smoothScroll();
 			slickFunc();
