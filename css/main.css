@@ -27,7 +27,6 @@ html {
     text-shadow: none;
 }
 
-
 /* ==========================================================================
    Custom Fonts
    ========================================================================== */
@@ -923,6 +922,29 @@ a .button {
     .movedown {
         padding-top: 0;
     }
+}
+
+/* DISABLED HERO ANIMATIONS ON MOBILE - PREVENT INCONSISTENT BEHAVIOR */
+@media only screen and (max-width : 768px) {
+.full .animated {
+    /CSS transitions/
+    -o-transition-property: none !important;
+    -moz-transition-property: none !important;
+    -ms-transition-property: none !important;
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+    /CSS transforms/
+    -o-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+    /CSS animations/
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
 }
 
 @media only screen and (max-width: 690px) {
