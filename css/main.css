@@ -112,12 +112,14 @@ h5 {
 }
 
 #herobg {
-    /* hold */
+    animation-delay: 0s !important;
+    -webkit-animation-delay: 0s !important;
 }
 
 .hero .fadeInDown,
 .hero .fadeInUp {
-/* hold */
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
 }
 
 .esclogo {
@@ -927,7 +929,6 @@ a .button {
 
 /* DISABLED HERO ANIMATIONS ON MOBILE - PREVENT INCONSISTENT BEHAVIOR */
 @media only screen and (max-width: 768px) {
-
     .full .animated {
         /* /CSS transitions/ */
         -o-transition-property: none !important;
