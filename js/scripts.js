@@ -7,6 +7,7 @@
 		$navbar = $('.navbar'),
 		$skyVideo = $('video#skyvideo'),
 		genericMobileUA = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)),
+		$hero = $('.full'),
 
 		stickyNavFunc = function() {
 			$(window).scroll(function() {
@@ -87,6 +88,12 @@
 			}
 		};
 
+	document.body.classList.add('js-loading');
+	window.addEventListener("load", showPage);
+	function showPage() {
+	  document.body.classList.remove('js-loading');
+	}
+
 	$document.on({
 		ready: function() {
 			stickyNavFunc();
@@ -103,8 +110,5 @@
 			fadeInFunc('.scrolled .fadeDown.animated', 'fadeInDown');
 			fadeInFunc('.scrolled .fadeLeft.animated', 'fadeInLeft');
 		},
-		load: function() {
-			$('body').removeClass('js-loading');
-		}
 	});
 })(jQuery);
