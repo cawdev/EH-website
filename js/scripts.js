@@ -86,18 +86,17 @@
 			if (genericMobileUA) {
 				$skyVideo.remove();
 			}
-		},
-		showPage = function() {
-			document.body.classList.remove('js-loading');
-		},
-		delayAnimation = function() {
-			document.body.classList.add('js-loading');
-			window.addEventListener("load", showPage);
 		};
+
+    // Delay Animation - Vanilla JS
+	document.body.classList.add('js-loading');
+	window.addEventListener("load", showPage);
+	function showPage() {
+	  document.body.classList.remove('js-loading');
+	}
 
 	$document.on({
 		ready: function() {
-			delayAnimation();
 			stickyNavFunc();
 			smoothScroll();
 			slickFunc();
