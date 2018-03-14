@@ -112,11 +112,12 @@ h5 {
 }
 
 #herobg {
+    /* hold */
 }
 
 .hero .fadeInDown,
 .hero .fadeInUp {
-
+/* hold */
 }
 
 .esclogo {
@@ -721,7 +722,7 @@ a .button {
 .bodylink {
     color: #42C3B7;
     text-decoration: underline;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .bodylink:hover {
@@ -925,26 +926,28 @@ a .button {
 }
 
 /* DISABLED HERO ANIMATIONS ON MOBILE - PREVENT INCONSISTENT BEHAVIOR */
-@media only screen and (max-width : 768px) {
-.full .animated {
-    /CSS transitions/
-    -o-transition-property: none !important;
-    -moz-transition-property: none !important;
-    -ms-transition-property: none !important;
-    -webkit-transition-property: none !important;
-    transition-property: none !important;
-    /CSS transforms/
-    -o-transform: none !important;
-    -moz-transform: none !important;
-    -ms-transform: none !important;
-    -webkit-transform: none !important;
-    transform: none !important;
-    /CSS animations/
-    -webkit-animation: none !important;
-    -moz-animation: none !important;
-    -o-animation: none !important;
-    -ms-animation: none !important;
-    animation: none !important;
+@media only screen and (max-width: 768px) {
+
+    .full .animated {
+        /* /CSS transitions/ */
+        -o-transition-property: none !important;
+        -moz-transition-property: none !important;
+        -ms-transition-property: none !important;
+        -webkit-transition-property: none !important;
+        transition-property: none !important;
+        /* /CSS transforms/ */
+        -o-transform: none !important;
+        -moz-transform: none !important;
+        -ms-transform: none !important;
+        -webkit-transform: none !important;
+        transform: none !important;
+        /* /CSS animations/ */
+        -webkit-animation: none !important;
+        -moz-animation: none !important;
+        -o-animation: none !important;
+        -ms-animation: none !important;
+        animation: none !important;
+    }
 }
 
 @media only screen and (max-width: 690px) {
@@ -1152,16 +1155,16 @@ a .button {
     .redbar {
         max-width: 45%;
         font-size: 10px;
-        }
+    }
 
     .whitebar {
         width: 55%;
-        }
+    }
 
     .case-right .button {
         padding: 14px 26px;
         left: 81px;
-        }
+    }
 }
 
 
