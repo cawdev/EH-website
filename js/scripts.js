@@ -5,7 +5,7 @@
 	var $document = $(document),
 		$window = $(window),
 		$navbar = $('.navbar'),
-		$skyVideo = $('video#skyvideo'),
+		$behind = $('.behind'),
 		genericMobileUA = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)),
 
 		stickyNavFunc = function() {
@@ -74,19 +74,19 @@
 				}
 			});
 		},
-		preventHTMLVideo = function() {
-			if (genericMobileUA) {
-				$skyVideo.remove();
+		enableHTMLVideo = function() {
+			if (!genericMobileUA) {
+				$behind.append('<video autoplay muted loop playsinline id="skyvideo"><source src="img/sky-quest-clouds.mp4" type="video/mp4"></video>');
 			}
 		};
 
 	$document.on({
 		ready: function() {
+			enableHTMLVideo();
 			stickyNavFunc();
 			smoothScroll();
 			slickFunc();
 			progressBarFunc();
-			preventHTMLVideo();
 		}
 	});
 
