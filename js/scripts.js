@@ -97,6 +97,7 @@
 
 	$document.on({
 		ready: function() {
+			delayAnimation();
 			stickyNavFunc();
 			smoothScroll();
 			slickFunc();
