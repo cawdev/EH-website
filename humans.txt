@@ -3,13 +3,15 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Al Harris, Principal Strategist, Escape Hatch LTD
+    Matt Ivons, Principal Creative, Escape Hatch LTD
 
 # THANKS
 
-    <name>
+    Cameron Weimer, Developer, EXPRESS
+    Sean Sefciek, Developer, 7TH Street Web Co.
 
 # TECHNOLOGY COLOPHON
 
     CSS3, HTML5
-    Apache Server Configs, jQuery, Modernizr, Normalize.css
+    Apache Server Configs, jQuery, Normalize.css
