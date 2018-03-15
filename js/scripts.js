@@ -35,7 +35,6 @@
 					mobileFirst: true,
 					focusOnSelect: true,
 					variableWidth: true,
-					autoplay: true,
 					autoplaySpeed: 5000,
 					cssEase: 'cubic-bezier(0.86, 0, 0.07, 1)',
 					useTransform: true,
@@ -78,6 +77,14 @@
 			if (!genericMobileUA) {
 				$behind.append('<video autoplay muted loop playsinline id="skyvideo"><source src="img/sky-quest-clouds.mp4" type="video/mp4"></video>');
 			}
+		},
+		startSlickCarousel = function() {
+			// using element container above to init - more fluid
+			$('.case-sidebars').each(function() {
+				if (isScrolledIntoView($(this)) === true) {
+					$('.multiple-items').slick('slickPlay');
+				}
+			});
 		};
 
 	$document.on({
@@ -95,6 +102,7 @@
 			fadeInFunc('.scrolled .fadeUp.animated', 'fadeInUp');
 			fadeInFunc('.scrolled .fadeDown.animated', 'fadeInDown');
 			fadeInFunc('.scrolled .fadeLeft.animated', 'fadeInLeft');
+			startSlickCarousel();
 		}
 	});
 })(jQuery);
